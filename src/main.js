@@ -20,16 +20,17 @@ var savedCovers = [
 ];
 var currentCover;
 
-// Add your event listeners here 👇
-randomCoverButton.addEventListener("click", getRandomCover)
+// Add your event listeners here
+homeButton.addEventListener("click", viewHome)
 makeCoverButton.addEventListener("click", viewForm)
+randomCoverButton.addEventListener("click", getRandomCover)
 viewSavedButton.addEventListener("click", viewSavedCovers)
 
 // Create your event handlers and other functions here 👇
 function viewForm() {
   formView.classList.remove("hidden");
-  savedView.classList.add("hidden");
   homeView.classList.add("hidden");
+  savedView.classList.add("hidden");
 
   homeButton.classList.remove("hidden");
   randomCoverButton.classList.add("hidden");
@@ -38,10 +39,22 @@ function viewForm() {
   makeCoverButton.classList.remove("hidden");
 }
 
+function viewHome() {
+  formView.classList.add("hidden");
+  homeView.classList.remove("hidden");
+  savedView.classList.add("hidden");
+
+  homeButton.classList.add("hidden");
+  randomCoverButton.classList.remove("hidden");
+  saveCoverButton.classList.remove("hidden");
+  viewSavedButton.classList.remove("hidden");
+  makeCoverButton.classList.remove("hidden");
+}
+
 function viewSavedCovers() {
   formView.classList.add("hidden");
-  savedView.classList.remove("hidden");
   homeView.classList.add("hidden");
+  savedView.classList.remove("hidden");
 
   homeButton.classList.remove("hidden");
   randomCoverButton.classList.add("hidden");

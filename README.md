@@ -36,8 +36,8 @@ Saved Covers View
 - [x] "Home" button is visible
 
 Home View
-- [ ] "Show New Random Cover" & "Save Cover" buttons visible again
-- [ ] "Home" button is hidden
+- [x] "Show New Random Cover" & "Save Cover" buttons visible again
+- [x] "Home" button is hidden
 
 ### Iteration 2
 Creating a New Cover
