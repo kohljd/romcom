@@ -26,14 +26,14 @@ Main Page
 
 ### Iteration 1
 Make Your Own Cover View
-- [ ] Clicking "Make Your Own Cover" button shows the form. Homepage view is hidden
-- [ ] "Show New Random Cover" & "Save Cover" buttons are hidden
-- [ ] "Home" button is visible
+- [x] Clicking "Make Your Own Cover" button shows the form. Homepage view is hidden
+- [x] "Show New Random Cover" & "Save Cover" buttons are hidden
+- [x] "Home" button is visible
 
 Saved Covers View
-- [ ] Clicking "View Saved Covers" button shows saved covers section. Homepage view is hidden
-- [ ] “Show New Random Cover” & “Save Cover” buttons are hidden
-- [ ] "Home" button is visible
+- [x] Clicking "View Saved Covers" button shows saved covers section. Homepage view is hidden
+- [x] “Show New Random Cover” & “Save Cover” buttons are hidden
+- [x] "Home" button is visible
 
 Home View
 - [ ] "Show New Random Cover" & "Save Cover" buttons visible again
