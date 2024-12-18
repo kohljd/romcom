@@ -1,10 +1,18 @@
 // Create variables targetting the relevant DOM elements here 👇
+const homeView = document.querySelector(".home-view");
+const savedView = document.querySelector(".saved-view");
+const formView = document.querySelector(".form-view");
+
 const coverImage = document.querySelector(".cover-image");
 const coverTitle = document.querySelector(".cover-title");
 const coverTagLine1 = document.querySelector(".tagline-1");
 const coverTagLine2 = document.querySelector(".tagline-2");
 
+const homeButton = document.querySelector(".home-button");
 const randomCoverButton = document.querySelector(".random-cover-button");
+const saveCoverButton = document.querySelector(".save-cover-button");
+const viewSavedButton = document.querySelector(".vie-saved-button");
+const makeCoverButton = document.querySelector(".make-new-button");
 
 // We've provided a few variables below
 var savedCovers = [
@@ -14,8 +22,21 @@ var currentCover;
 
 // Add your event listeners here 👇
 randomCoverButton.addEventListener("click", getRandomCover)
+makeCoverButton.addEventListener("click", viewForm)
 
 // Create your event handlers and other functions here 👇
+function viewForm() {
+  formView.classList.remove("hidden");
+  savedView.classList.add("hidden");
+  homeView.classList.add("hidden");
+
+  homeButton.classList.remove("hidden");
+  randomCoverButton.classList.add("hidden");
+  saveCoverButton.classList.add("hidden");
+  viewSavedButton.classList.remove("hidden");
+  makeCoverButton.classList.remove("hidden");
+}
+
 function getRandomCover() {
   let descriptorIndex1 = getRandomIndex(descriptors);
   let descriptorIndex2 = (descriptorIndex1 === (descriptors.length - 1)) ? descriptorIndex1 + 1
