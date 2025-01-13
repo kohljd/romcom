@@ -29,11 +29,11 @@ var savedCovers = [
 var currentCover;
 
 // Add your event listeners here
-homeButton.addEventListener("click", viewHome)
-makeCoverButton.addEventListener("click", viewForm)
-randomCoverButton.addEventListener("click", getRandomCover)
-viewSavedButton.addEventListener("click", viewSavedCovers)
-submitCoverButton.addEventListener("click", makeOwnCover)
+homeButton.addEventListener("click", viewHome);
+makeCoverButton.addEventListener("click", viewForm);
+randomCoverButton.addEventListener("click", getRandomCover);
+viewSavedButton.addEventListener("click", viewSavedCovers);
+submitCoverButton.addEventListener("click", makeOwnCover);
 
 // Create your event handlers and other functions here 👇
 function viewForm() {
@@ -74,10 +74,10 @@ function viewSavedCovers() {
 
 function getRandomCover() {
   let descriptorIndex1 = getRandomIndex(descriptors);
-  let descriptorIndex2 = (descriptorIndex1 === (descriptors.length - 1)) ? descriptorIndex1 + 1
-    : descriptorIndex1 - 1;
+  let descriptorIndex2 = (descriptorIndex1 === (descriptors.length - 1)) ? descriptorIndex1 - 1
+    : descriptorIndex1 + 1;
 
-  const currentCover = createCover(
+  currentCover = createCover(
     covers[getRandomIndex(covers)],
     titles[getRandomIndex(titles)],
     descriptors[descriptorIndex1],
@@ -99,7 +99,7 @@ function makeOwnCover() {
   event.preventDefault();
 
   // create cover
-  const currentCover = createCover(
+  currentCover = createCover(
     makeCoverFormData.cover.value,
     makeCoverFormData.title.value,
     makeCoverFormData.descriptor1.value,
