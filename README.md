@@ -41,11 +41,11 @@ Home View
 
 ### Iteration 2
 Creating a New Cover
-- [ ] User can fill out the Make Your Own Cover form and click "Make My Book" button to submit
-- [ ] Inputted values create a new, unique cover object
-- [ ] Values are saved to the proper arrays (covers, titles, etc.)
-- [ ] Submitting form returns user to Home View
-- [ ] Home Vie now has the newly created cover displayed
+- [x] User can fill out the Make Your Own Cover form and click "Make My Book" button to submit
+- [x] Inputted values create a new, unique cover object
+- [x] Values are saved to the proper arrays (covers, titles, etc.)
+- [x] Submitting form returns user to Home View
+- [x] Home View now has the newly created cover displayed
 
 ### Iteration 3
 Save/View Covers
