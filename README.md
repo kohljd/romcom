@@ -49,8 +49,8 @@ Creating a New Cover
 
 ### Iteration 3
 Save/View Covers
-- [ ] Clicking "Save Cover" button adds current cover to savedCovers array
-- [ ] Prevent duplicate covers being saved
+- [x] Clicking "Save Cover" button adds current cover to savedCovers array
+- [x] Prevent duplicate covers being saved
 - [ ] Clicking "View Saved Covers" goes to the Saved Covers View
 - [ ] Saved Covers View displays all covers in the savedCovers array
 
