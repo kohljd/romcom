@@ -56,7 +56,7 @@ Save/View Covers
 
 ### Iteration 4
 Deleing Saved Covers
-- [ ] Double clicking a cover on the Saved Covers View deletes it
+- [x] Double clicking a cover on the Saved Covers View deletes it
 
 ### Optional Extensions
 - [ ] Implement data validation and error handling into the form (disable the button until all fields are filled, provide error messages if data entered is not correct, etc.)

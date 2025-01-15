@@ -76,7 +76,7 @@ function viewSavedCovers() {
 
   for (const cover of savedCovers) {
     savedCoversSection.innerHTML +=
-      `<section class="mini-cover">
+      `<section class="mini-cover" id=${cover.id} ondblclick="deleteSavedCover(this)">
         <img class="cover-image" src= ${cover.coverImg}>
         <h2 class="cover-title">${cover.title}</h2>
         <h3 class="tagline">A tale of <span class="tagline-1">${cover.tagline1}</span> and <span class="tagline-2">${cover.tagline2}</span></h3>
@@ -85,6 +85,13 @@ function viewSavedCovers() {
       </section>
       `;
   }
+}
+
+function deleteSavedCover(coverSection) {
+  const coverIndex = savedCovers.findIndex((cover) => (cover.id === coverSection.id));
+
+  savedCovers.splice(coverIndex, 1);
+  coverSection.remove();
 }
 
 function getRandomCover() {
