@@ -37,53 +37,48 @@ submitCoverButton.addEventListener("click", makeOwnCover);
 saveCoverButton.addEventListener("click", saveCover);
 
 // Create your event handlers and other functions here 👇
-function viewForm() {
-  formView.classList.remove("hidden");
-  homeView.classList.add("hidden");
-  savedView.classList.add("hidden");
+function viewHome() {
+  const hiddenElements = [formView, savedView, homeButton];
+  const shownElements = [homeView, randomCoverButton, saveCoverButton, viewSavedButton, makeCoverButton];
 
-  homeButton.classList.remove("hidden");
-  randomCoverButton.classList.add("hidden");
-  saveCoverButton.classList.add("hidden");
-  viewSavedButton.classList.remove("hidden");
-  makeCoverButton.classList.remove("hidden");
+  changeView(shownElements, hiddenElements);
 }
 
-function viewHome() {
-  formView.classList.add("hidden");
-  homeView.classList.remove("hidden");
-  savedView.classList.add("hidden");
+function viewForm() {
+  const hiddenElements = [homeView, savedView, randomCoverButton, saveCoverButton];
+  const shownElements = [formView, homeButton, viewSavedButton, makeCoverButton];
 
-  homeButton.classList.add("hidden");
-  randomCoverButton.classList.remove("hidden");
-  saveCoverButton.classList.remove("hidden");
-  viewSavedButton.classList.remove("hidden");
-  makeCoverButton.classList.remove("hidden");
+  changeView(shownElements, hiddenElements);
 }
 
 function viewSavedCovers() {
-  formView.classList.add("hidden");
-  homeView.classList.add("hidden");
-  savedView.classList.remove("hidden");
-
-  homeButton.classList.remove("hidden");
-  randomCoverButton.classList.add("hidden");
-  saveCoverButton.classList.add("hidden");
-  viewSavedButton.classList.remove("hidden");
-  makeCoverButton.classList.remove("hidden");
-
+  const hiddenElements = [formView, homeView, randomCoverButton, saveCoverButton];
+  const shownElements = [savedView, homeButton, viewSavedButton, makeCoverButton];
+  
+  changeView(shownElements, hiddenElements);
+  
   savedCoversSection.innerHTML = ""
-
+  
   for (const cover of savedCovers) {
     savedCoversSection.innerHTML +=
-      `<section class="mini-cover" id=${cover.id} ondblclick="deleteSavedCover(this)">
-        <img class="cover-image" src= ${cover.coverImg}>
-        <h2 class="cover-title">${cover.title}</h2>
-        <h3 class="tagline">A tale of <span class="tagline-1">${cover.tagline1}</span> and <span class="tagline-2">${cover.tagline2}</span></h3>
-        <img class="price-tag" src="./assets/price.png">
-        <img class="overlay" src="./assets/overlay.png">
-      </section>
-      `;
+    `<section class="mini-cover" id=${cover.id} ondblclick="deleteSavedCover(this)">
+    <img class="cover-image" src= ${cover.coverImg}>
+    <h2 class="cover-title">${cover.title}</h2>
+    <h3 class="tagline">A tale of <span class="tagline-1">${cover.tagline1}</span> and <span class="tagline-2">${cover.tagline2}</span></h3>
+    <img class="price-tag" src="./assets/price.png">
+    <img class="overlay" src="./assets/overlay.png">
+    </section>
+    `;
+  }
+}
+
+function changeView(shownElements, hiddenElements) {
+  for (const element of shownElements) {
+    element.classList.remove("hidden");
+  }
+
+  for (const element of hiddenElements) {
+    element.classList.add("hidden");
   }
 }
 
