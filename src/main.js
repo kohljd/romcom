@@ -22,6 +22,8 @@ const makeCoverFormData = {
 };
 const submitCoverButton = document.querySelector(".create-new-book-button");
 
+const savedCoversSection = document.querySelector(".saved-covers-section");
+
 // We've provided a few variables below
 var savedCovers = [];
 var currentCover;
@@ -69,6 +71,20 @@ function viewSavedCovers() {
   saveCoverButton.classList.add("hidden");
   viewSavedButton.classList.remove("hidden");
   makeCoverButton.classList.remove("hidden");
+
+  savedCoversSection.innerHTML = ""
+
+  for (const cover of savedCovers) {
+    savedCoversSection.innerHTML +=
+      `<section class="saved-cover">
+        <img class="cover-image" src= ${cover.coverImg}>
+        <h2 class="cover-title">${cover.title}</h2>
+        <h3 class="tagline">A tale of <span class="tagline-1">${cover.tagline1}</span> and <span class="tagline-2">${cover.tagline2}</span></h3>
+        <img class="price-tag" src="./assets/price.png">
+        <img class="overlay" src="./assets/overlay.png">
+      </section>
+      `;
+  }
 }
 
 function getRandomCover() {
