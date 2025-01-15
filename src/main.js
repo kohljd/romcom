@@ -76,7 +76,7 @@ function viewSavedCovers() {
 
   for (const cover of savedCovers) {
     savedCoversSection.innerHTML +=
-      `<section class="saved-cover">
+      `<section class="mini-cover">
         <img class="cover-image" src= ${cover.coverImg}>
         <h2 class="cover-title">${cover.title}</h2>
         <h3 class="tagline">A tale of <span class="tagline-1">${cover.tagline1}</span> and <span class="tagline-2">${cover.tagline2}</span></h3>
