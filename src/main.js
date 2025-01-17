@@ -54,11 +54,11 @@ function viewForm() {
 function viewSavedCovers() {
   const hiddenElements = [formView, homeView, randomCoverButton, saveCoverButton];
   const shownElements = [savedView, homeButton, viewSavedButton, makeCoverButton];
-  
+
   changeView(shownElements, hiddenElements);
-  
-  savedCoversSection.innerHTML = ""
-  
+
+  savedCoversSection.innerHTML = "";
+
   for (const cover of savedCovers) {
     savedCoversSection.innerHTML +=
     `<section class="mini-cover" id=${cover.id} ondblclick="deleteSavedCover(this)">
@@ -101,13 +101,9 @@ function getRandomCover() {
     descriptors[descriptorIndex2],
   );
 
-  coverImage.src = currentCover.coverImg;
-  coverTitle.innerHTML = currentCover.title;
-  coverTagLine1.innerHTML = currentCover.tagline1;
-  coverTagLine2.innerHTML = currentCover.tagline2;
+  displayCover();
 }
 
-// We've provided two functions to get you started
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
@@ -129,14 +125,15 @@ function makeOwnCover() {
   if (!descriptors.includes(currentCover.tagline1)) (descriptors.push(currentCover.tagline1));
   if (!descriptors.includes(currentCover.tagline2)) (descriptors.push(currentCover.tagline2));
 
-  // update displayed cover
+  displayCover();
+  viewHome();
+}
+
+function displayCover() {
   coverImage.src = currentCover.coverImg;
   coverTitle.innerHTML = currentCover.title;
   coverTagLine1.innerHTML = currentCover.tagline1;
   coverTagLine2.innerHTML = currentCover.tagline2;
-
-  // display home view
-  viewHome()
 }
 
 function saveCover() {
