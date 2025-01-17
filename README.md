@@ -1,24 +1,6 @@
 # RomCom
 
-One of Turing's FE projects. The project spec & rubric can be found [here](https://frontend.turing.io/projects/module-1/romcom-pair.html)
-
-______________________________________________________  
-# README Template  
-Before turning this project in, erase this line and everything above it and fill in the info below.  
-______________________________________________________  
-
-# RomCom  
-
-### Abstract:
-[//]: <> (Briefly describe what you built and its features. What problem is the app solving? How does this application solve that problem?)
-
-### Installation Instructions:
-[//]: <> (What steps does a person have to take to get your app cloned down and running?)
-
-### Preview of App:
-[//]: <> (Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off.)
-
-____
+One of Turing's FE projects. The project spec & rubric can be found [here](https://frontend.turing.edu/projects/module-1/romcom-pair-v2.html)
 
 ### Iteration 0
 Main Page
